@@ -5,7 +5,8 @@ class AdrTools < Formula
   sha256 "ceeba995d2319ba2735dd3c613bf145070efb8984886887a9edde7d498354b4b"
 
   def install
-    bin.install Dir["src/*"] - Dir["src/*.md"]
+    # bin.install Dir["src/*"] - Dir["src/*.md"]
+    bin.install Dir["src/*"] 
   end
 
   test do
