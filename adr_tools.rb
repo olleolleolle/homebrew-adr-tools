@@ -1,9 +1,9 @@
 class AdrTools < Formula
   desc "A command-line tool for working with Architecture Decision Records (ADRs)."
   homepage "https://github.com/npryce/adr-tools"
-  url "https://codeload.github.com/npryce/adr-tools/tar.gz/2.0.0"
-  version "2.0.0"
-  sha256 "91305ee2515f619801d90aab2f4bdcc4f696063cc3b89b57b69706446393246f"
+  url "https://codeload.github.com/npryce/adr-tools/tar.gz/1.2.0"
+  version "1.2.0"
+  sha256 "3f45646c099ae996b97c855a9a27ed540e076580eba59c2e8613453b7a67e412"
 
   def install
     inreplace 'src/adr-init' do |filename|
@@ -20,12 +20,10 @@ class AdrTools < Formula
       _adr_title 
       _adr_update_status
       adr
-      adr-config
       adr-generate 
       adr-help
       adr-list 
       adr-new
-      adr-upgrade-repository
     }.each do |filename|
       inreplace "src/#{filename}", '$(dirname $0)/config.sh', "#{prefix}/bin/config.sh"
     end 
